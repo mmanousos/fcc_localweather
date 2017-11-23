@@ -18,11 +18,20 @@ body {
 h3, 
 .credit {
     font-family: 'Satisfy', cursive;
+    color: #4F628E;
+}
+
+a {
+    color: #4F628E;
 }
 
 .title {
     margin-top: 50px;
     margin-bottom: 30px;
+}
+
+.main {
+    color: #2E4272;
 }
 
 #temp {
@@ -39,11 +48,29 @@ h1 {
     margin-bottom: 20px;
 }
 
+.forecast {
+    color: #162955;
+}
 
 .credit, 
 .toggle-button {
     margin-top: 30px;
 }
+
+
+/* -------------------- */
+/*       BUTTON         */
+/* -------------------- */
+
+.f-toggle {
+    background-color: #2E4272;
+}
+
+button {
+    color: #7887AB;
+}
+
+
 
 /* Blue pallete: http://paletton.com/#uid=13L0u0kllllaFw0g0qFqFg0w0aF
 /* Gray pallete: 
