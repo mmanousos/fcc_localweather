@@ -26,8 +26,12 @@ h3,
 }
 
 #temp {
-    line-height: 200%;
-    vertical-align: center;
+    line-height: 150%;
+    vertical-align: bottom;
+}
+
+h1 {
+    font-size: 400%;
 }
 
 .main,
