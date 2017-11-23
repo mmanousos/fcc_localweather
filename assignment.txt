@@ -1,0 +1,53 @@
+=== ASSIGNMENT ===
+
+
+Show the Local Weather
+
+Objective: Build a CodePen.io app that is functionally similar to this: http://codepen.io/FreeCodeCamp/full/bELRjV.
+
+Rule #1: Don't look at the example project's code. Figure it out for yourself.
+
+Rule #2: Fulfill the below user stories. Use whichever libraries or APIs you need. Give it your own personal style.
+
+User Story: I can see the weather in my current location.
+
+User Story: I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.
+
+User Story: I can push a button to toggle between Fahrenheit and Celsius.
+
+Note: Many internet browsers now require an HTTP Secure (https://) connection to obtain a user's locale via HTML5 Geolocation. For this reason, we recommend using HTML5 Geolocation to get user location and then use the freeCodeCamp Weather API https://fcc-weather-api.glitch.me which uses an HTTP Secure connection for the weather. Also, be sure to connect to CodePen.io via https://.
+
+
+=== PSEUDOCODE === 
+
+Get user's browser location 
+Use that to pull from APIs weather
+    example: "{"coord":{"lon":139,"lat":35},"weather":[{"id":520,"main":"Rain","description":"light intensity shower rain"},{"id":701,"main":"Mist","description":"mist","icon":"50n"}],"base":"stations","main":{"temp":9.09,"pressure":1006,"humidity":100,"temp_min":7,"temp_max":11},"visibility":1207,"wind":{"speed":2.1,"deg":10},"clouds":{"all":90},"dt":1511387280,"sys":{"type":1,"id":7618,"message":0.1723,"country":"JP","sunrise":1511299549,"sunset":1511336072},"id":1851632,"name":"Shuzenji","cod":200}" 
+"Use the endpoint: https://fcc-weather-api.glitch.me/. Use this endpoint to get the weather at a location. To prevent abuses this server accepts GET requests only, and serves only the route /api/current?lon=:longitude&lat=:latitude. Images links are included in the JSON under weather[0].icon. This is enough to complete the challenge."     
+    
+    
+Check temperature 
+
+Display image based on weather + temp
+    options:     
+                rain 
+                clouds - 
+                    overcast 
+                    few / scattered 
+                    broken 
+                clear - below 10 deg C, snow on mountain
+                        above 10 deg C, meadow
+                        above 15 deg C, beach
+                        above 26 deg C, melting ice cream
+                        above 32 deg C, panting dog
+                        above 37 deg C, desert scene
+Button to toggle between F / C
+    Celcius to F conversion formula: T(°F) = T(°C) × 1.8 + 32
+
+=== values from fcc weather API === 
+
+"weather" condition = "main" - clear, clouds, rain 
+                    "description" - scattered, broken, overcast, few (clouds);  light, moderate (rain)
+                    "icon" - correlates 
+temperature =  "main" > "temp"                   
+

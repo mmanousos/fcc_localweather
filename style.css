@@ -1,0 +1,46 @@
+html {
+    max-width: 1000px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-color: #2E4272;
+  background-color: -webkit-linear-gradient(#4F628E, #2E4272);
+  background-color:    -moz-linear-gradient(#4F628E, #2E4272);
+  background-color:         linear-gradient(#4F628E, #2E4272);
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+h3, 
+.credit {
+    font-family: 'Satisfy', cursive;
+}
+
+.title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#temp {
+    line-height: 200%;
+    vertical-align: center;
+}
+
+.main,
+.forecast {
+    margin-bottom: 20px;
+}
+
+
+.credit, 
+.toggle-button {
+    margin-top: 30px;
+}
+
+/* Blue pallete: http://paletton.com/#uid=13L0u0kllllaFw0g0qFqFg0w0aF
+/* Gray pallete: 
+http://paletton.com/#uid=13L0u0k6Clz2cw04mqd8WhgbeaY  or
+http://paletton.com/#uid=13L0u0k58fb2Yqb49kr688De274
