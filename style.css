@@ -4,10 +4,11 @@ html {
 }
 
 body {
-    background-color: #2E4272;
-  background-color: -webkit-linear-gradient(#4F628E, #2E4272);
-  background-color:    -moz-linear-gradient(#4F628E, #2E4272);
-  background-color:         linear-gradient(#4F628E, #2E4272);
+ /*   background-color: #2E4272;
+    background-color: -webkit-linear-gradient(#4F628E, #2E4272);
+    background-color:    -moz-linear-gradient(#4F628E, #2E4272);
+    background-color:         linear-gradient(#4F628E, #2E4272); */
+    background-image: url("img/brokenclouds.jpg")
 }
 
 .container-fluid {
