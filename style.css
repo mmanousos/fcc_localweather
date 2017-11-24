@@ -86,11 +86,14 @@ h1 {
 
 .f-toggle {
     background-color: #2E4272;
+    color: #A5B5DB; 
+    border-color: #A5B5DB; 
 }
 
-button {
+.c-toggle {
+    border-color: none;
     color: #7887AB;
-}
+} 
 
 
 
