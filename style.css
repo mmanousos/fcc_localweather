@@ -66,13 +66,13 @@ h1 {
 /* -------------------- */
 
 
-#forecast-icon {
-    -webkit-filter: grayscale(100%);
+/* #forecast-icon {
+   -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
+    filter: grayscale(100%); 
+} */
 
 .wu-logo {
     height: 40px;
