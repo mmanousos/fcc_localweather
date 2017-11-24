@@ -1,36 +1,121 @@
 $(document).ready(function() { // wait for page to load
-
+    
     function loadWeather(weatherObject) {
-        $("#temp").html("" + weatherObject.tempDisplay + "");
+        $("#temp").html("" + weatherObject.tempDisplayC + "");
         $("#weather").html("" + weatherObject.weatherDisplay + "");
         $("#forecast-icon").attr("src",  weatherObject.iconDisplay);
-        // <img src="">
-        
     }
-    
+
+    // autodetects location based on IP address
+       var url = "https://cors-anywhere.herokuapp.com/http://api.wunderground.com/api/4dd3c502d6164004/conditions/astronomy/forecast/hourly/q/autoip.json"; // my key 4dd3c502d6164004 */
     
     function getWeather() {
-        // var url = "https://fcc-weather-api.glitch.me/api/current?lat=35&lon=139";
-        // var url = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139";
-        var url = "https://cors-anywhere.herokuapp.com/http://api.wunderground.com/api/4dd3c502d6164004/conditions/q/CA/San_Francisco.json"; // key 4dd3c502d6164004
         $.getJSON(url, function(data) {
-            // var iconVal = data.weather[0].icon; 
+            
             var iconVal = data.current_observation.icon_url;
-            var tempVal = data.current_observation.temp_c; 
-            var weatherVal = data.current_observation.weather; 
-            // var weatherVal = data.weather[0].main;
-            // var descriptionVal = data.weather[0].description;
-        
+            var tempValC = data.current_observation.temp_c;
+            var tempValF = data.current_observation.temp_f;
+            var weatherVal = data.current_observation.weather;
 
-        var weatherObject = {
-            iconDisplay: iconVal, 
-            tempDisplay: tempVal,
-            weatherDisplay: weatherVal,
-           // descriptionDisplay: DescriptionVal
-        };
+            var weatherObject = {
+                iconDisplay: iconVal, 
+                tempDisplayC: tempValC,
+                tempDisplayF: tempValF,
+                weatherDisplay: weatherVal
+            };
+        
         console.log(weatherObject);
         loadWeather(weatherObject);
+        toggleButton(weatherObject);
         });
     }
-    getWeather();    
+    getWeather();  
+    
+    // functionality of "Convert" button
+    function toggleButton(weatherObject) {
+        $("#convert").on("click", function() {
+            if ($(this).is(".f-toggle")) {
+                $("#temp-id").html("Fahrenheit");
+                $("#temp").html("" + weatherObject.tempDisplayF + "");
+                $("#convert").html("Convert to Celsius")
+                $("#convert").addClass("c-toggle").removeClass("f-toggle");  
+            } else {
+                $("#temp-id").html("Celsius");
+                $("#temp").html("" + weatherObject.tempDisplayC + "");
+                $("#convert").html("Convert to Fahrenheit")
+                $("#convert").addClass("f-toggle").removeClass("c-toggle");
+            }
+        });  
+    };   
+    
 }); 
+
+
+
+    
+  /* only use if not autochecking location based on IP address 
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var lat = position.coords.latitude;
+            var log = position.coords.longitude;
+            var locationObject = {
+                latCur: lat, 
+                logCur: log
+            }
+            console.log(locationObject);
+            return (locationObject);
+        }); 
+    };
+    */ 
+
+
+// requires approval of location data
+  /*  var url="https://cors-anywhere.herokuapp.com/http://api.wunderground.com/api/4dd3c502d6164004/conditions/astronomy/forecast/hourly/q/"; */
+
+// I would prefer to use browser's precise location but I'm not sure how to use the lat and long pulled using geolocation and pass it into the API pull. 
+    // for now use autoip and code for Celsius / Fahrenheit switch and new background images. 
+
+
+
+  /*
+    json = json.filter(function(locationObject) {
+        return data.current_observation.latitude === latCur  
+            });
+    json = json.filter(function(locationObject) {
+        return data.current_observation.longitude === logCur 
+            });      
+    console.log(data.current_observation.full);
+    */
+    
+  
+//example to filter objects in json
+ /* function find_in_object(my_object, my_criteria){
+
+  return my_object.filter(function(obj) {
+    return Object.keys(my_criteria).every(function(c) {
+      return obj[c] == my_criteria[c];
+    });
+  });
+
+}
+*/
+
+
+         //filter data based on current location
+     /*     var sortByLat = function(data, locationObject) {
+              return json.filter(function(obj) {
+                  return Object.keys(locationObject.curLat).every(function(c) {
+                      return obj[c] == locationObject.curLat[c];
+                  })
+              }); console.log(json.current_observation.display_location.city); 
+          } */
+
+/* var jsonLat = json.current_observation.display_location.latitude;
+var jsonLog = json.current_observation.display_location.longitude;
+                
+           let jsonSort = Array.prototype.filter(function(data, locationObject) {
+        return jsonLat === latCur  
+            });
+        jsonSort = Array.prototype.filter(function(locationObject) {
+        return jsonLog === logCur 
+            });      */
