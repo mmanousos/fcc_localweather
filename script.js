@@ -1,13 +1,42 @@
 $(document).ready(function() { // wait for page to load
-    
     function loadWeather(weatherObject) {
         $("#temp").html("" + weatherObject.tempDisplayC + "");
+        switch (weatherObject.weatherDisplay) {
+            case "Clear": if (weatherObject.tempDisplayC < 10)  {
+                    $('#body').addClass("cold");  
+                    $('#weather').addClass("bright");
+                } else if (weatherObject.tempDisplayC < 15) {
+                    $('#body').addClass("cool");  
+                    $('#weather').addClass("bright");
+                } else if (weatherObject.tempDisplayC < 26) {
+                    $('#body').addClass("tepid");   
+                    $('.title, .credit, a, #weather').addClass("brighter");
+                } else if (weatherObject.tempDisplayC < 32) {
+                    $('#body').addClass("warm");     
+                    $('#weather').addClass("brighter");
+                } else if (weatherObject.tempDisplayC < 37) {
+                    $('#body').addClass("hot");     
+                } else   {
+                    $('#body').addClass("scorching");
+                    $('#weather').addClass("bright");
+                };
+                break;
+            case "Rain": 
+                $('#body').addClass("rainy");
+                $('.main, #weather').addClass("bright");
+                break;
+            case "Cloudy": 
+                $('#body').addClass("cloudy");
+                $('#weather').addClass("bright");
+                break;  
+            }; 
         $("#weather").html("" + weatherObject.weatherDisplay + "");
         $("#forecast-icon").attr("src",  weatherObject.iconDisplay);
     }
 
     // autodetects location based on IP address
        var url = "https://cors-anywhere.herokuapp.com/http://api.wunderground.com/api/4dd3c502d6164004/conditions/astronomy/forecast/hourly/q/autoip.json"; // my key 4dd3c502d6164004 */
+    
     
     function getWeather() {
         $.getJSON(url, function(data) {
@@ -16,13 +45,13 @@ $(document).ready(function() { // wait for page to load
             var tempValC = data.current_observation.temp_c;
             var tempValF = data.current_observation.temp_f;
             var weatherVal = data.current_observation.weather;
-
+            
             var weatherObject = {
                 iconDisplay: iconVal, 
-                tempDisplayC: tempValC,
+                tempDisplayC: tempValC,  
                 tempDisplayF: tempValF,
                 weatherDisplay: weatherVal
-            };
+            }; 
         
         console.log(weatherObject);
         loadWeather(weatherObject);

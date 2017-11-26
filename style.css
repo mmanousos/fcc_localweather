@@ -3,12 +3,14 @@ html {
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-body {
- /*   background-color: #2E4272;
-    background-color: -webkit-linear-gradient(#4F628E, #2E4272);
-    background-color:    -moz-linear-gradient(#4F628E, #2E4272);
-    background-color:         linear-gradient(#4F628E, #2E4272); */
-    background-image: url("img/brokenclouds.jpg")
+body {    
+    background: linear-gradient(rgba(255, 255, 255, 0.24), rgba(0, 0, 0, 0.6)), url('img/brokenclouds.jpg'); 
+}
+
+.body-style {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1000px;
 }
 
 .container-fluid {
@@ -30,8 +32,17 @@ a {
     margin-bottom: 30px;
 }
 
-.main {
+.main, 
+.weather {    
     color: #2E4272;
+}
+
+.bright {
+    color: #6176A6;
+}
+
+.brighter {
+    color: #B9CAF1;
 }
 
 .temp-display {
@@ -49,7 +60,7 @@ h1 {
 
 .main,
 .forecast {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .forecast {
@@ -68,15 +79,6 @@ h1 {
 /* -------------------- */
 /*       IMAGES         */
 /* -------------------- */
-
-
-/* #forecast-icon {
-   -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%); 
-} */
 
 .wu-logo {
     height: 40px;
@@ -99,9 +101,70 @@ h1 {
     color: #7887AB;
 } 
 
+/* -------------------- */
+/*      BACKGROUND      */
+/* -------------------- */
+
+
+.cloudy {
+    background: linear-gradient(rgba(234, 234, 234, 0.51), rgba(0, 0, 0, 0.8)), url('img/broken.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+}
+
+.rainy {
+    background: linear-gradient(rgba(52, 52, 52, 0.56), rgba(0, 0, 0, 0.7)), url('img/moderate-drops-of-rain-from-sky-weather.jpg'); 
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+}
+
+.cold {
+    background: linear-gradient(rgba(255, 255, 255, 0.22), rgba(0, 0, 0, 0.7)), url('img/clear-cold.jpeg'); 
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+}
+
+.cool {
+    background: linear-gradient(rgba(250, 250, 250, 0.21), rgba(0, 0, 0, 0.8)), url('img/clear-meadow-flowers-green-mountains-blue-springtime-prairie-yellow-spring-peaks-meadow-snowy-alps-french-wildflowers-beautiful-flower-wallpaper-images.jpg'); 
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+}
+
+.tepid {
+    background: linear-gradient(rgba(250, 250, 250, 0.11), rgba(0, 0, 0, 0.7)), url('img/clear-moderate.jpeg');  
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+}
+
+.warm {
+    background: linear-gradient(rgba(180, 180, 180, 0.5), rgba(0, 0, 0, 0.7)), url('img/clear-pantingdog-dog_beach_stones_sit_protruding_tongue_72400_3840x2160.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+}
+
+.hot {
+    background: linear-gradient(rgba(221, 221, 221, 0.69), rgba(0, 0, 0, 0.5)), url('img/clear-01-melting-ice-cream.w710.h473.2x.jpg'); 
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+}
+
+.scorching {
+    background: linear-gradient(rgba(221, 221, 221, 0.69), rgba(0, 0, 0, 0.5)), url('img/clear-desert-eyeem-105147772.jpg'); 
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+}
 
 
 /* Blue pallete: http://paletton.com/#uid=13L0u0kllllaFw0g0qFqFg0w0aF
+or http://paletton.com/#uid=13L0u0kllll8QNjf6tIr-cYAv4- (lighter pales)
 /* Gray pallete: 
 http://paletton.com/#uid=13L0u0k6Clz2cw04mqd8WhgbeaY  or
 http://paletton.com/#uid=13L0u0k58fb2Yqb49kr688De274
