@@ -10,6 +10,7 @@ body {
 .body-style {
     background-position: center center;
     background-repeat: no-repeat;
+    overflow: hidden;
     background-size: 1000px;
 }
 
@@ -111,6 +112,23 @@ h1 {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
+    overflow: hidden;
+}
+
+.partly-cloudy {
+    background: linear-gradient(rgba(234, 234, 234, 0.51), rgba(0, 0, 0, 0.8)), url('img/scattered-clouds-in-the-sky.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    overflow: hidden;
+}
+
+.overcast {
+    background: linear-gradient(rgba(234, 234, 234, 0.51), rgba(0, 0, 0, 0.8)), url('img/Overcast-sky.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    overflow: hidden;
 }
 
 .rainy {
@@ -118,6 +136,7 @@ h1 {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
+    overflow: hidden;
 }
 
 .cold {
@@ -125,6 +144,7 @@ h1 {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
+    overflow: hidden;
 }
 
 .cool {
@@ -132,6 +152,7 @@ h1 {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
+    overflow: hidden;
 }
 
 .tepid {
@@ -139,6 +160,7 @@ h1 {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
+    overflow: hidden;
 }
 
 .warm {
@@ -153,6 +175,7 @@ h1 {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
+    overflow: hidden;
 }
 
 .scorching {
@@ -160,6 +183,7 @@ h1 {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
+    overflow: hidden;
 }
 
 

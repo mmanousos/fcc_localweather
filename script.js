@@ -25,9 +25,17 @@ $(document).ready(function() { // wait for page to load
                 $('#body').addClass("rainy");
                 $('.main, #weather').addClass("bright");
                 break;
+            case "Overcast": 
+                $('#body').addClass("overcast");
+                $('.main, #weather').addClass("bright");
+                break;
+            case "Partly Cloudy": 
+                $('#body').addClass("partly-cloudy");
+                $('#weather').addClass("brighter");
+                break;  
             case "Cloudy": 
                 $('#body').addClass("cloudy");
-                $('#weather').addClass("bright");
+                $('#weather').addClass("brighter");
                 break;  
             }; 
         $("#weather").html("" + weatherObject.weatherDisplay + "");
