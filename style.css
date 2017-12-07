@@ -1,10 +1,10 @@
 html {
-    max-width: 1000px;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: #fff;
 }
 
 body {    
-    background: linear-gradient(rgba(255, 255, 255, 0.24), rgba(0, 0, 0, 0.6)), url('img/brokenclouds.jpg'); 
+    background: url('img/brokenclouds.jpg'); 
 }
 
 .body-style {
@@ -29,7 +29,7 @@ a {
 }
 
 .title {
-    margin-top: 50px;
+    padding-top: 50px;
     margin-bottom: 30px;
 }
 
@@ -81,6 +81,7 @@ h1 {
 /*       IMAGES         */
 /* -------------------- */
 
+/* weather underground logo */
 .wu-logo {
     height: 40px;
     padding-left: 5px;
@@ -108,31 +109,31 @@ h1 {
 
 
 .cloudy {
-    background: linear-gradient(rgba(234, 234, 234, 0.51), rgba(0, 0, 0, 0.8)), url('img/broken.jpg');
+    background: url('img/broken.jpg');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: 1100px;
     overflow: hidden;
 }
 
 .partly-cloudy {
-    background: linear-gradient(rgba(234, 234, 234, 0.51), rgba(0, 0, 0, 0.8)), url('img/scattered-clouds-in-the-sky.jpg');
+    background: url('img/scattered-clouds-in-the-sky.jpg');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: 1300px;
     overflow: hidden;
 }
 
 .overcast {
-    background: linear-gradient(rgba(234, 234, 234, 0.51), rgba(0, 0, 0, 0.8)), url('img/Overcast-sky.jpg');
+    background: url('img/Overcast-sky.jpg');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: 1200px;
     overflow: hidden;
 }
 
 .rainy {
-    background: linear-gradient(rgba(52, 52, 52, 0.56), rgba(0, 0, 0, 0.7)), url('img/moderate-drops-of-rain-from-sky-weather.jpg'); 
+    background: url('img/moderate-drops-of-rain-from-sky-weather.jpg'); 
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
@@ -140,7 +141,7 @@ h1 {
 }
 
 .cold {
-    background: linear-gradient(rgba(255, 255, 255, 0.22), rgba(0, 0, 0, 0.7)), url('img/clear-cold.jpeg'); 
+    background: url('img/clear-cold.jpeg'); 
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
@@ -148,7 +149,7 @@ h1 {
 }
 
 .cool {
-    background: linear-gradient(rgba(250, 250, 250, 0.21), rgba(0, 0, 0, 0.8)), url('img/clear-meadow-flowers-green-mountains-blue-springtime-prairie-yellow-spring-peaks-meadow-snowy-alps-french-wildflowers-beautiful-flower-wallpaper-images.jpg'); 
+    background: url('img/clear-meadow-flowers-green-mountains-blue-springtime-prairie-yellow-spring-peaks-meadow-snowy-alps-french-wildflowers-beautiful-flower-wallpaper-images.jpg'); 
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;
@@ -156,30 +157,30 @@ h1 {
 }
 
 .tepid {
-    background: linear-gradient(rgba(250, 250, 250, 0.11), rgba(0, 0, 0, 0.7)), url('img/clear-moderate.jpeg');  
+    background: url('img/clear-moderate.jpeg');    
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: 900px;
     overflow: hidden;
 }
 
 .warm {
-    background: linear-gradient(rgba(180, 180, 180, 0.5), rgba(0, 0, 0, 0.7)), url('img/clear-pantingdog-dog_beach_stones_sit_protruding_tongue_72400_3840x2160.jpg');
+    background: url('img/clear-pantingdog-dog_beach_stones_sit_protruding_tongue_72400_3840x2160.jpg');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: 1200px;
 }
 
 .hot {
-    background: linear-gradient(rgba(221, 221, 221, 0.69), rgba(0, 0, 0, 0.5)), url('img/clear-01-melting-ice-cream.w710.h473.2x.jpg'); 
+    background: url('img/clear-01-melting-ice-cream.w710.h473.2x.jpg'); 
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: 800px;
     overflow: hidden;
 }
 
 .scorching {
-    background: linear-gradient(rgba(221, 221, 221, 0.69), rgba(0, 0, 0, 0.5)), url('img/clear-desert-eyeem-105147772.jpg'); 
+    background: url('img/clear-desert-eyeem-105147772.jpg'); 
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px;

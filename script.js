@@ -4,26 +4,30 @@ $(document).ready(function() { // wait for page to load
         switch (weatherObject.weatherDisplay) {
             case "Clear": if (weatherObject.tempDisplayC < 10)  {
                     $('#body').addClass("cold");  
-                    $('#weather').addClass("bright");
+                    $('a, .credit').addClass("brighter");
                 } else if (weatherObject.tempDisplayC < 15) {
                     $('#body').addClass("cool");  
-                    $('#weather').addClass("bright");
+                    $('.title, #weather, a, .credit').addClass("brighter");
                 } else if (weatherObject.tempDisplayC < 26) {
                     $('#body').addClass("tepid");   
-                    $('.title, .credit, a, #weather').addClass("brighter");
+                    $('.title, #weather').addClass("brighter");
+                    $('a', '.credit').addClass("bright"); 
                 } else if (weatherObject.tempDisplayC < 32) {
                     $('#body').addClass("warm");     
-                    $('#weather').addClass("brighter");
+                    $('.title, #weather').addClass("brighter");
+                    $('a', '.credit').addClass("bright");
                 } else if (weatherObject.tempDisplayC < 37) {
                     $('#body').addClass("hot");     
                 } else   {
                     $('#body').addClass("scorching");
                     $('#weather').addClass("bright");
+                    $('.title').addClass("brighter");
                 };
                 break;
             case "Rain": 
                 $('#body').addClass("rainy");
-                $('.main, #weather').addClass("bright");
+                $('.title, #weather').addClass("brighter");
+                $('.main').addClass("bright");
                 break;
             case "Overcast": 
                 $('#body').addClass("overcast");
@@ -31,11 +35,12 @@ $(document).ready(function() { // wait for page to load
                 break;
             case "Partly Cloudy": 
                 $('#body').addClass("partly-cloudy");
-                $('#weather').addClass("brighter");
+                $('.title, #weather').addClass("brighter");
                 break;  
             case "Cloudy": 
                 $('#body').addClass("cloudy");
                 $('#weather').addClass("brighter");
+                $('.title').addClass("bright");
                 break;  
             }; 
         $("#weather").html("" + weatherObject.weatherDisplay + "");
@@ -48,7 +53,7 @@ $(document).ready(function() { // wait for page to load
     
     function getWeather() {
         $.getJSON(url, function(data) {
-            
+        console.log(data);    
             var iconVal = data.current_observation.icon_url;
             var tempValC = data.current_observation.temp_c;
             var tempValF = data.current_observation.temp_f;
